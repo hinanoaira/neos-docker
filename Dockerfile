@@ -30,6 +30,9 @@ RUN locale-gen en_US.UTF-8
 ENV LANG 'en_US.UTF-8'
 ENV LANGUAGE 'en_US:en'
 
+# Create symlink
+RUN ln -s /usr/games/steamcmd /usr/bin/steamcmd
+
 # Update SteamCMD
 RUN steamcmd +quit
 
